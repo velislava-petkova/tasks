@@ -1,0 +1,8 @@
+C:\Users\velis\Desktop\codexio\4\Magic_words\Magic_words\bin\Debug\Magic_words.exe.config
+C:\Users\velis\Desktop\codexio\4\Magic_words\Magic_words\bin\Debug\Magic_words.exe
+C:\Users\velis\Desktop\codexio\4\Magic_words\Magic_words\bin\Debug\Magic_words.pdb
+C:\Users\velis\Desktop\codexio\4\Magic_words\Magic_words\obj\Debug\Magic_words.csproj.AssemblyReference.cache
+C:\Users\velis\Desktop\codexio\4\Magic_words\Magic_words\obj\Debug\Magic_words.csproj.SuggestedBindingRedirects.cache
+C:\Users\velis\Desktop\codexio\4\Magic_words\Magic_words\obj\Debug\Magic_words.csproj.CoreCompileInputs.cache
+C:\Users\velis\Desktop\codexio\4\Magic_words\Magic_words\obj\Debug\Magic_words.exe
+C:\Users\velis\Desktop\codexio\4\Magic_words\Magic_words\obj\Debug\Magic_words.pdb

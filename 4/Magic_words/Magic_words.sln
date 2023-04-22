@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magic_words", "Magic_words\Magic_words.csproj", "{683B8D33-B390-455E-9BDE-3A50822AFB5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{683B8D33-B390-455E-9BDE-3A50822AFB5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{683B8D33-B390-455E-9BDE-3A50822AFB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{683B8D33-B390-455E-9BDE-3A50822AFB5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{683B8D33-B390-455E-9BDE-3A50822AFB5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D930DA0-C7C7-405D-B4BD-65E32E94BF4C}
+	EndGlobalSection
+EndGlobal
