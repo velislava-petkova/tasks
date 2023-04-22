@@ -1,0 +1,8 @@
+C:\Users\velis\Desktop\codexio\2\ColoredBalls\ColoredBalls\bin\Debug\ColoredBalls.exe.config
+C:\Users\velis\Desktop\codexio\2\ColoredBalls\ColoredBalls\bin\Debug\ColoredBalls.exe
+C:\Users\velis\Desktop\codexio\2\ColoredBalls\ColoredBalls\bin\Debug\ColoredBalls.pdb
+C:\Users\velis\Desktop\codexio\2\ColoredBalls\ColoredBalls\obj\Debug\ColoredBalls.csproj.AssemblyReference.cache
+C:\Users\velis\Desktop\codexio\2\ColoredBalls\ColoredBalls\obj\Debug\ColoredBalls.csproj.SuggestedBindingRedirects.cache
+C:\Users\velis\Desktop\codexio\2\ColoredBalls\ColoredBalls\obj\Debug\ColoredBalls.csproj.CoreCompileInputs.cache
+C:\Users\velis\Desktop\codexio\2\ColoredBalls\ColoredBalls\obj\Debug\ColoredBalls.exe
+C:\Users\velis\Desktop\codexio\2\ColoredBalls\ColoredBalls\obj\Debug\ColoredBalls.pdb
