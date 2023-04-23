@@ -1,0 +1,8 @@
+C:\Users\velis\Desktop\codexio\3-v2\Carrots_v2\Carrots_v2\bin\Debug\Carrots_v2.exe.config
+C:\Users\velis\Desktop\codexio\3-v2\Carrots_v2\Carrots_v2\bin\Debug\Carrots_v2.exe
+C:\Users\velis\Desktop\codexio\3-v2\Carrots_v2\Carrots_v2\bin\Debug\Carrots_v2.pdb
+C:\Users\velis\Desktop\codexio\3-v2\Carrots_v2\Carrots_v2\obj\Debug\Carrots_v2.csproj.AssemblyReference.cache
+C:\Users\velis\Desktop\codexio\3-v2\Carrots_v2\Carrots_v2\obj\Debug\Carrots_v2.csproj.SuggestedBindingRedirects.cache
+C:\Users\velis\Desktop\codexio\3-v2\Carrots_v2\Carrots_v2\obj\Debug\Carrots_v2.csproj.CoreCompileInputs.cache
+C:\Users\velis\Desktop\codexio\3-v2\Carrots_v2\Carrots_v2\obj\Debug\Carrots_v2.exe
+C:\Users\velis\Desktop\codexio\3-v2\Carrots_v2\Carrots_v2\obj\Debug\Carrots_v2.pdb
