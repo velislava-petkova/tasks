@@ -9,7 +9,9 @@ namespace Magic_words
 {
     internal class Program
     {
-
+        /*
+         This function initializes the dictionary with the letters in the words.
+         */
         public static Dictionary<char, List<int>> inputWord(string word1, string word2, Dictionary<char, List<int>> dict)
         {
             foreach (char c in word1)
@@ -46,6 +48,12 @@ namespace Magic_words
             string firstWord = Console.ReadLine();
             string secondWord = Console.ReadLine();
             Dictionary<char, List<int>> letters = new Dictionary<char, List<int>>();
+            /*
+            The main idea is to create a dictionary where the key is a letter and we have list of integers where we keep the number of 
+            occurances of the letter in each word. If we have two words the first will be at indx 0 and the second at indx 1.
+            If we want to cpmpare more words we can easily extend the solution.
+
+             */
 
             letters = inputWord(firstWord, secondWord, letters);
 
@@ -56,6 +64,9 @@ namespace Magic_words
                 if (letters[c][0] != letters[c][1])
                 {
                     count += Math.Abs(letters[c][0] - letters[c][1]);
+                    /*
+                     To find out how many letters we will remove we will caclulate the difference between the occurances of a letter in each word.
+                     */
                 }
 
             }
