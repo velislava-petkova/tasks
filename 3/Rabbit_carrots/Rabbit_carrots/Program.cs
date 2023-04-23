@@ -14,6 +14,20 @@ namespace Rabbit_carrots
             up, down, left, right
         }
 
+        public static char carrot = 'x';
+        public static char empty = '-';
+
+        public static bool hasNoNeighbours(int x, int y, char[,] matrix, int dim)
+        {
+            if ((x == 0 || matrix[x - 1, y] == empty) && (x == dim - 1 || matrix[x + 1, y] == empty)
+                && (y == 0 || matrix[x, y - 1] == empty) && (y == dim - 1 || matrix[x, y + 1] == empty))
+            {
+                Console.WriteLine("has no neighbours: " + x + ';' + y);
+                return true;
+            }
+
+            return false;
+        }
 
         public static void print(char[,] matrix, int dimension)
         {
@@ -29,75 +43,161 @@ namespace Rabbit_carrots
             }
 
         }
-
-
-        public static int findGroup(int x, int y, Direction lastDir, char[,] matrix, int count)
+        public static void goUp(int x, int y, char[,] matrix, int dim)
         {
-            if (lastDir != Direction.down)
+            Console.WriteLine("up");
+
+            if ((x == 0 || matrix[x - 1, y] == empty) && (x == dim - 1 || matrix[x + 1, y] == empty))
             {
-                Console.WriteLine("move up");
-
-                if (x == 0 || matrix[x - 1, y] == '-')
+                goLeft(x, y, matrix, dim);
+                goRight(x, y, matrix, dim);
+            }
+            for (int i = x - 1; i >= 0; i--)
+            {
+                if (matrix[i, y] == carrot)
                 {
-                    return count;
-                }
+                    matrix[i, y] = empty;
+                    if (hasNoNeighbours(i, y, matrix, dim)) return;
+                    goLeft(i, y, matrix, dim);
+                    goRight(i, y, matrix, dim);
 
-                matrix[x - 1, y] = '-';
-                count++;
-                findGroup(x, y, Direction.up, matrix, count);
+
+                }
+                else
+                {
+                    print(matrix, dim);
+                    Console.WriteLine("///////////");
+                    return;
+                }
             }
 
-            if (lastDir != Direction.up)
-            {
-                Console.WriteLine("move down");
-
-                if (x == matrix.Length - 1 || matrix[x + 1, y] == '-')
-                {
-                    return count;
-                }
-
-                matrix[x + 1, y] = '-';
-                count++;
-                findGroup(x, y, Direction.down, matrix, count);
-            }
-
-            if (lastDir != Direction.right)
-            {
-                if (y == 0 || matrix[x, y - 1] == '-')
-                {
-                    return count;
-                }
-
-                matrix[x, y - 1] = '-';
-                count++;
-                findGroup(x, y, Direction.left, matrix, count);
-            }
-
-
-            if (lastDir != Direction.left)
-            {
-                if (y == matrix.Length - 1 || matrix[x, y + 1] == '-')
-                {
-                    return count;
-                }
-
-                matrix[x, y + 1] = '-';
-                count++;
-                findGroup(x, y, Direction.right, matrix, count);
-            }
-
-            return 1;
         }
 
-        public static int countJumps(char[,] matrix)
+        public static void goDown(int x, int y, char[,] matrix, int dim)
+        {
+            Console.WriteLine("down");
+
+
+            if ((x == 0 || matrix[x - 1, y] == empty) && (x == dim - 1 || matrix[x + 1, y] == empty))
+            {
+                goLeft(x, y, matrix, dim);
+
+                goRight(x, y, matrix, dim);
+            }
+
+            for (int i = x + 1; i < dim; i++)
+            {
+                if (matrix[i, y] == carrot)
+                {
+                    matrix[i, y] = empty;
+                    if (hasNoNeighbours(i, y, matrix, dim)) return;
+                    goLeft(i, y, matrix, dim);
+
+                    goRight(i, y, matrix, dim);
+
+                }
+                else
+                {
+                    print(matrix, dim);
+                    Console.WriteLine("///////////");
+                    return;
+                }
+            }
+
+        }
+
+        public static void goLeft(int x, int y, char[,] matrix, int dim)
+        {
+            Console.WriteLine("left");
+
+            if ((y == 0 || matrix[x, y - 1] == empty) && (y == dim - 1 || matrix[x, y + 1] == empty))
+            {
+                goUp(x, y, matrix, dim);
+                goDown(x, y, matrix, dim);
+            }
+
+            for (int k = y - 1; k >= 0; k--)
+            {
+                if (matrix[x, k] == carrot)
+                {
+                    matrix[x, k] = empty;
+                    if (hasNoNeighbours(x, k, matrix, dim)) return;
+                    goUp(x, y, matrix, dim);
+                    goDown(x, y, matrix, dim);
+
+                }
+                else
+                {
+                    print(matrix, dim);
+                    Console.WriteLine("///////////");
+                    return;
+                }
+            }
+
+
+        }
+
+        public static void goRight(int x, int y, char[,] matrix, int dim)
+        {
+            Console.WriteLine("right");
+
+            if ((y == 0 || matrix[x, y - 1] == empty) && (y == dim - 1 || matrix[x, y + 1] == empty))
+            {
+                goUp(x, y, matrix, dim);
+                goDown(x, y, matrix, dim);
+            }
+
+            for (int k = y + 1; k < dim; k++)
+            {
+                if (matrix[x, k] == carrot)
+                {
+                    matrix[x, k] = empty;
+                    if (hasNoNeighbours(x, k, matrix, dim)) return;
+                    goUp(x, y, matrix, dim);
+                    goDown(x, y, matrix, dim);
+
+                }
+                else
+                {
+                    print(matrix, dim);
+                    Console.WriteLine("///////////");
+                    return;
+                }
+
+            }
+
+        }
+        public static void findGroup(int x, int y, char[,] matrix, int dim)
+        {
+            for (int i = x; i < dim; i++)
+            {
+                for (int k = y; k < dim; k++)
+                {
+                    goLeft(i, k, matrix, dim);
+                    goRight(i, k, matrix, dim);
+
+                }
+            }
+        }
+
+
+        public static int countJumps(char[,] matrix, int dimension)
         {
             int count = 0;
-            int carrots = 0;
-            while ((carrots = findGroup(0, 0, Direction.right, matrix, 0)) != 0)
+            for (int i = 0; i < dimension; i++)
             {
-                Console.WriteLine("group");
+                for (int k = 0; k < dimension; k++)
+                {
+                    if (matrix[i, k] == carrot)
+                    {
+                        findGroup(i, k, matrix, dimension);
+                        print(matrix, dimension);
+                        Console.WriteLine(" new group ");
+                        count++;
+                    }
+                }
             }
-            return 0;
+            return count;
         }
 
 
@@ -117,9 +217,10 @@ namespace Rabbit_carrots
                 }
             }
 
-            Console.WriteLine(countJumps(matrix));
+            Console.WriteLine(countJumps(matrix, dimension));
 
             print(matrix, dimension);
         }
     }
 }
+
