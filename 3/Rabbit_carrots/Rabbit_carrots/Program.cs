@@ -206,7 +206,22 @@ namespace Rabbit_carrots
                 }
             }
 
-            Console.WriteLine("The rabbit will need " + countJumps(matrix, visited, dimension) + " jumps :)");
+            int jumps = countJumps(matrix, visited, dimension);
+
+            if (jumps == 1)
+            {
+                Console.WriteLine("The rabbit will need " + jumps + " jump :)");
+
+            }
+            else if (jumps == 0)
+            {
+                Console.WriteLine("There are no carrots in the carden so the rabbit doesn't need to jump");
+
+            }
+            else
+            {
+                Console.WriteLine("The rabbit will need " + jumps + " jumps :)");
+            }
 
         }
     }
