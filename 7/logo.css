@@ -73,7 +73,7 @@
 }
 
 .rows {
-  width: 100%;
+  width: calc(100vw - 8px);
   height: calc(100vh - 8px);
   display: flex;
   justify-content: space-between;
